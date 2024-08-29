@@ -2,16 +2,13 @@
 ASIC Lab 1: Setup and Getting Around the Compute Environment
 </h1>
 <p align="center">
-Prof. John Wawrzynek
+Prof. Daniel Van Blerkom
 </p>
 <p align="center">
-TAs: (ordered by section) Kevin He, Kevin Anderson
+Department of Electrical and Computer Science, Cal Poly Pomona
 </p>
 <p align="center">
-Department of Electrical Engineering and Computer Science
-</p>
-<p align="center">
-College of Engineering, University of California, Berkeley
+Adapted from UCB EECS150 (Go Bears!)
 </p>
 
 
@@ -65,14 +62,8 @@ The goal of this lab is to introduce some basic techniques needed to use the com
 - Building familarity with Git
 - Learn Linux Basics
 
-
-<!-- ### Tools:
-- Cadence Genus
-- Cadence Innovus -->
-
 ### Submission
 1.  Solutions for lab [questions](#paragraph8) will be submitted electronically using **Gradescope**. 
-2. In person check-off by lab TA (can be done anytime before next lab)
 
 ## Setup
 
@@ -244,7 +235,6 @@ Submit your answers to the lab questions on Gradescope, then ask your lab TA to 
 1. Show the output of running `ssh -T git@github.com` on the lab machines.
 2. What is your instructional account's disk quota (to the nearest GB)? Do files in your temporary directory count against your quota?
 3. What text editor are you using?
-4. Which instructional machine(s) should you use while completing the labs and the project?
 
 #### Question 2: Common terminal tasks
 
@@ -280,7 +270,6 @@ For each task below, please provide the commands that result in the correct perm
 1. Change the script to be executable by you and no one else.
 2. Add permissions for everyone in your group to be able to execute the same script
 3. Make the script writable by you ane everyone in your group, but unreadable by others
-4. *(optional)* Change the owner of the file to be `eecs151` (Note: you will not be able to execute this command, so just provide the command itself)
 
 #### Question 5: Makefile Targets
 
@@ -311,6 +300,8 @@ That was a lot of commands and a lot of new things to memorize (especially if yo
 * [Tmux](https://tmuxcheatsheet.com/)
 
 ## Acknowledgement
+Adapted to Cal Poly from UCB/EECS150 by Dr. Daniel Van Blerkom.
+
 This lab is the result of the work of many EECS151/251 GSIs over the years including:
 Written By:
 - Nathan Narevsky (2014, 2017)
