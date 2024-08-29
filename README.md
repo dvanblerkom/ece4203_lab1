@@ -230,7 +230,7 @@ The following links are useful for learning how to make some common customizatio
 
 ### Questions
 
-Submit your answers to the lab questions on Gradescope, then ask your lab TA to check you off.
+Submit your answers to the lab questions on Gradescope.
 #### Question 1: Setup
 1. Show the output of running `ssh -T git@github.com` on the lab machines.
 2. What is your instructional account's disk quota (to the nearest GB)? Do files in your temporary directory count against your quota?
