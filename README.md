@@ -5,7 +5,7 @@ ASIC Lab 1: Setup and Getting Around the Compute Environment
 Prof. Daniel Van Blerkom
 </p>
 <p align="center">
-Department of Electrical and Computer Science, Cal Poly Pomona
+Department of Electrical and Computer Engineering, Cal Poly Pomona
 </p>
 <p align="center">
 Adapted from UCB EECS150 (Go Bears!)
