@@ -58,7 +58,7 @@ The goal of this lab is to introduce some basic techniques needed to use the com
 
 - Setup Instructional Account
 - Successfully remote into lab machines
-- Install X2Go
+- Install XMing
 - Building familarity with Git
 - Learn Linux Basics
 
@@ -67,7 +67,7 @@ The goal of this lab is to introduce some basic techniques needed to use the com
 
 ## Setup
 
-The first step for this lab is to setup your environment. ***If you have not performed the steps in the [Setup](./README.md) section of the README.md for the repo, please go follow those instructions to get setup.*** Afterward, please [Clone this Repo](./README.md).
+The first step for this lab is to setup your environment.
 
 
 ## Regular Expressions  <a name="paragraph2"></a>
