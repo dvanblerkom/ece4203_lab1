@@ -75,7 +75,7 @@ Here's a quick summary of the setup steps:
 3) Clone your Github Classroom Lab 1 assignment into a directory in your HPC account.
 4) Run the Miniconda installation script.
 
-Note, the following sadly assumes you have a Windows machine.  Since Windows is not a serious engineering operating system, we need to 
+Note, the following (sadly) assumes you have a Windows machine.  Since Windows is not a serious engineering operating system, we need to 
 add some programs to make it usable.  Mac users do not need to install PuTTY or Xming, as equivalent capabilities already exist in the Mac OS.
 
 ### PuTTY for Windows
@@ -105,7 +105,7 @@ Once you have made a successful connection, you must log in with your Bronco nam
 
 The Xming ``server'' allows external X11 processes to display windows on your Windows PC. More recent Mac's should already have this capability under OS X and Unix (Linux) installations typically have this capability, so they won't need Xming. You need to install it on your Windows PC if you want to use PuTTY to display graphical windows.
 
-Download Xming from SourceForge here: [XMing download](https://sourceforge.net/projects/xming/)
+Download Xming from SourceForge here: [Xming download](https://sourceforge.net/projects/xming/)
 
 Here are the steps for configuring XMing on your Windows machine
 
@@ -118,14 +118,30 @@ Here are the steps for configuring XMing on your Windows machine
 
 Note that if you reboot your computer, you will also need to restart Xming. 
 
+Finally, you can test if your PuTTY and Xming installations work properly by logging into the HPC computer with PuTTY, and run the "display_image" program.  Start this program by typing the following, exactly as shown, on the command line:
+
+    /data02/ECE4203/bin/display_image
+
+You should see a window pop up with four color quadrants.
+
 ### More PuTTY and Xming
 
-This website from UCI has a nice walkthrough and a Youtube video for installing PuTTY and Xming.  Just remember to replace the UCI computer name with "hpc.cpp.edu".  Also, the HPC does not have xclock or firefox (or indeed any X11 programs) installed for you to test your installation with.  We will deal with this in a few steps.
+This website from UCI has a nice walkthrough and a Youtube video for installing PuTTY and Xming.  Just remember to replace the UCI computer name with "hpc.cpp.edu".  Also, the HPC does not have xclock or firefox (or indeed any X11 programs) installed for you to test your installation with; please test with the program described in the section above.
 [UCI Putty and Xming instructions](https://laptops.eng.uci.edu/engineering-software/using-linux/how-to-configure-putty-xming-on-your-laptop)
+
+
 
 ### Clone Assignment from Github Classroom
 
 In order to pull the files you will need for this lab from Github into your account on the HPC, you will use the git command 'clone'.  
+
+## The "CLI" - Command Line Interface
+
+This class will require you to work with the HPC computer using the command line interface, or CLI.  Here are some resources to come up to speed quickly if you haven't used the command line interface before:
+
+[Linux Journey](https://linuxjourney.com/) - choose the Command Line tutorial.
+
+[Command Line Basics](https://github.com/JulianEducation/CommandLineBasics)  - Scroll down and hit the "Open in Google Cloud Shell" button to start.
 
 ## Regular Expressions  <a name="paragraph2"></a>
 
