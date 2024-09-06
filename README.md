@@ -141,7 +141,9 @@ This class will require you to work with the HPC computer using the command line
 
 [Linux Journey](https://linuxjourney.com/) - choose the Command Line tutorial.
 
-[Command Line Basics](https://github.com/JulianEducation/CommandLineBasics)  - Scroll down and hit the "Open in Google Cloud Shell" button to start.
+[Command Line Basics](https://github.com/JulianEducation/CommandLineBasics) - Scroll down and hit the "Open in Google Cloud Shell" button to start.
+
+[The Missing Semester of Your CS Education](https://missing.csail.mit.edu/) - a full set of lectures from MIT on all the stuff you should have been taught but probably weren't.
 
 ## Regular Expressions  <a name="paragraph2"></a>
 
