@@ -349,10 +349,11 @@ The following links are useful for learning how to make some common customizatio
 ### Questions
 
 Submit your answers to the lab questions on Gradescope.
-#### Question 1: Setup
-1. Show the output of running `ssh -T git@github.com` on the lab machines.
-2. What is your instructional account's disk quota (to the nearest GB)? Do files in your temporary directory count against your quota?
-3. What text editor are you using?
+#### Question 1: Setup (do this after you finish all the Setup tasks)
+1. Show the output of running `ssh -T git@github.com`.
+2. Now show the output of running `ssh -T -p 443 git@ssh.github.com`.
+3. What is your instructional account's disk quota (to the nearest GB)? Do files in your temporary directory count against your quota?
+4. What text editor are you using?
 
 #### Question 2: Common terminal tasks
 
@@ -362,13 +363,13 @@ For 1-6 below, submit the command/keystrokes needed to generate the desired resu
 2. What directory is `git` installed in?
 3. Show the hidden files in your lab directory (the `lab1` folder in the repo you cloned from GitHub).
 4. What version of Vim is installed? Describe how you figured this out.
-5. (optional) Make a new directory called `backup` within `/home/tmp/<your-eecs-username>`. Copy all the files in this lab directory to the new `backup` directory and then delete all the copies in the new directory.
+5. (optional) Make a new directory called `backup` within `/tmp/<your-username>`. Copy all the files in this lab directory to the new `backup` directory. Then delete all the copies in the new directory.
 6. Run `ping www.google.com`, suspend it, then kill the process. Then run it in the background, report its PID, then kill the process.
 7. Run `top` and report the average CPU load, the highest CPU job, and the amount of memory used (just report the results for this question; you don't need to supply the command/how you got it).
 
 #### Question 3: Fun with Regular Expressions
 
-For each regular expression, provide an answer for **both** **basic** and **extended** mode (`sed` and `sed -r`).
+For each regular expression, provide an answer for **extended** mode (`sed -r`).
 
 You are allowed to use multiple commands to perform each task. Operate on the `force_regs.ucli` file.
 
