@@ -130,11 +130,6 @@ This website from UCI has a nice walkthrough and a Youtube video for installing 
 [UCI Putty and Xming instructions](https://laptops.eng.uci.edu/engineering-software/using-linux/how-to-configure-putty-xming-on-your-laptop)
 
 
-
-### Clone Assignment from Github Classroom
-
-In order to pull the files you will need for this lab from Github into your account on the HPC, you will use the git command 'clone'.  
-
 ## The "CLI" - Command Line Interface
 
 This class will require you to work with the HPC computer using the command line interface, or CLI.  Here are some resources to come up to speed quickly if you haven't used the command line interface before:
@@ -144,6 +139,34 @@ This class will require you to work with the HPC computer using the command line
 [Command Line Basics](https://github.com/JulianEducation/CommandLineBasics) - Scroll down and hit the "Open in Google Cloud Shell" button to start.
 
 [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/) - a full set of lectures from MIT on all the stuff you should have been taught but probably weren't.
+
+### Generate SSH encryption keys for GitHub
+
+Now we need a way to authenticate your HPC account with GitHub, to prove that it is you connecting to GitHub from the HPC computer. GitHub has moved away from using plain-text passwords, and now requires public key cryptography using SSH or GPG (we will use SSH).  First you need to generate the public and private keys, and then copy the public key into your GitHub user settings on the GitHub website.
+
+    Open a PuTTY terminal and log in to your HPC account.
+    Run "ssh-keygen -t rsa" and follow the instructions.  You can use an empty passcode.
+    You have now created your ssh keys. They live in the directory ~/.ssh.
+    Now run "cat .ssh/id_rsa.pub" to display your public key.
+    Navigate your web browser to your GitHub account. Click on the little circle in the top right corner to pull out the drop-down menu and select "Settings".
+    On the "Settings" page, choose "SSH and GPG keys".  Click the green button "New SSH key".    
+    Now copy your public key (that is, select the output from the "cat .ssh/id_rsa.pub" command on the screen, and copy it to the clipboard), and then paste it into the webpage where it says "Key".  You can type "HPC" in the "Title" box.
+    Confirm by clicking the green "Add SSH key".
+
+### Clone Assignment from Github Classroom
+
+In order to pull the files you will need for this lab from Github into your account on the HPC, you will use the git command 'clone'.  
+
+(Unfortunately, the HPC computers are blocking direct SSH connections to GitHub, so we have to use SSH over HTTPS.  Nothing is easy.)
+
+When you accepted this GitHub classroom assignment, you were assigned a repository that looked something like:
+
+dvb-ece-cpp/lab-1-(your github id).git
+
+To copy, or "clone", all the data from that repository into a directory in your HPC account, type the following:
+
+    git clone ssh://git@ssh.github.com:443/dvb-ece-cpp/lab-1-(your github id).git
+
 
 ## Regular Expressions  <a name="paragraph2"></a>
 
