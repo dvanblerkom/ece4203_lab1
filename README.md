@@ -69,6 +69,12 @@ The goal of this lab is to introduce some basic techniques needed to use the com
 
 The first step for this lab is to setup your environment.  We will be doing this in several steps over the next two labs.
 
+Here's a quick summary of the setup steps:
+1) Install PuTTY and Xming on your Windows machine to allow you to connect to the HPC computers.
+2) Create public/private encryption key pairs to authenticate your connection to GitHub.
+3) Clone your Github Classroom Lab 1 assignment into a directory in your HPC account.
+4) Run the Miniconda installation script.
+
 Note, the following sadly assumes you have a Windows machine.  Since Windows is not a serious engineering operating system, we need to 
 add some programs to make it usable.  Mac users do not need to install PuTTY or Xming, as equivalent capabilities already exist in the Mac OS.
 
