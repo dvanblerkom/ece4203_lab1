@@ -94,7 +94,8 @@ Here are the steps for configuring PuTTY with X-windows display:
     Type in a name, such as ``hpc'' in the Saved Sessions box
     In the left panel, click the + SSH button to expand the options.
     Then click X11 to display options for X11 forwarding.
-    Click the check-box called Enable X11 forwarding. Note that you will need an X-windows server on your PC to make this work. (See XMing below).
+    Click the check-box called Enable X11 forwarding. 
+        Note that you will need an X-windows server on your PC to make this work. (See XMing below).
     In the left panel, go back to the Sessions screen.
     Click Save to save the session.
     You are then ready to click Open to log in.
@@ -112,8 +113,10 @@ Here are the steps for configuring XMing on your Windows machine
     Start XLaunch.
     Select multiple windows and hit Next.
     Continue hitting Next, keeping the default settings.
-    Then hit Finish OR you can save the configuration, so you can restore the session later without going through these steps.
-    The Microsoft security software might give you a warning about allowing Xming to accept external connections. You should allow them in this case.
+    Then hit Finish OR you can save the configuration, so you can 
+        restore the session later without going through these steps.
+    The Microsoft security software might give you a warning about allowing 
+        Xming to accept external connections. You should allow them in this case.
     If you reboot your PC you may need to redo these steps.
 
 Note that if you reboot your computer, you will also need to restart Xming. 
@@ -148,9 +151,12 @@ Now we need a way to authenticate your HPC account with GitHub, to prove that it
     Run "ssh-keygen -t rsa" and follow the instructions.  You can use an empty passcode.
     You have now created your ssh keys. They live in the directory ~/.ssh.
     Now run "cat .ssh/id_rsa.pub" to display your public key.
-    Navigate your web browser to your GitHub account. Click on the little circle in the top right corner to pull out the drop-down menu and select "Settings".
+    Navigate your web browser to your GitHub account. 
+        Click on the little circle in the top right corner to pull out the drop-down menu and select "Settings".
     On the "Settings" page, choose "SSH and GPG keys".  Click the green button "New SSH key".    
-    Now copy your public key (that is, select the output from the "cat .ssh/id_rsa.pub" command on the screen, and copy it to the clipboard), and then paste it into the webpage where it says "Key".  You can type "HPC" in the "Title" box.
+    Now copy your public key (that is, select the output from the "cat .ssh/id_rsa.pub" command on the screen, 
+       and copy it to the clipboard), and then paste it into the webpage where it says "Key".  
+       You can type "HPC" in the "Title" box.
     Confirm by clicking the green "Add SSH key".
 
 ### Clone Assignment from Github Classroom
@@ -161,12 +167,26 @@ In order to pull the files you will need for this lab from Github into your acco
 
 When you accepted this GitHub classroom assignment, you were assigned a repository that looked something like:
 
-dvb-ece-cpp/lab-1-(your github id).git
+    dvb-ece-cpp/lab-1-(your github id).git
 
-To copy, or "clone", all the data from that repository into a directory in your HPC account, type the following:
+Where "(your github id)" is obviously replaced with your actual GitHub ID name.
+To copy, or "clone", all the data from that repository into a directory in your HPC account, type the following at the command prompt, from your home directory, when logged into the HPC:
 
     git clone ssh://git@ssh.github.com:443/dvb-ece-cpp/lab-1-(your github id).git
 
+Again, obviously, replace "(your github id)" above with your actual GitHub name.
+
+When git clone finishes, you should have a new directory called "lab-1-(your github id)" which will have the files you need for the rest of this lab.
+
+### Install Miniconda
+
+The last part of the set-up we will do in this lab is to run the shell script inside the directory you just cloned, called "install_miniconda.sh".
+
+Type the following at the command prompt to run this script:
+
+    ~/lab-1-(your github id)/install_miniconda.sh
+    
+This will take a while to finish, and will install the Anaconda software package system so that we can later install the VLSI tools.
 
 ## Regular Expressions  <a name="paragraph2"></a>
 
