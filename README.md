@@ -167,14 +167,14 @@ In order to pull the files you will need for this lab from Github into your acco
 
 When you accepted this GitHub classroom assignment, you were assigned a repository that looked something like:
 
-    dvb-ece-cpp/lab-1-(your github id).git
+    https://github.com/dvb-ece-cpp/lab-1-(your github id)
 
 Where "(your github id)" is obviously replaced with your actual GitHub ID name.
 To copy, or "clone", all the data from that repository into a directory in your HPC account, type the following at the command prompt, from your home directory, when logged into the HPC:
 
     git clone ssh://git@ssh.github.com:443/dvb-ece-cpp/lab-1-(your github id).git
 
-Again, obviously, replace "(your github id)" above with your actual GitHub name.
+Make sure to add the ".git" at the end.  Again, obviously, replace "(your github id)" above with your actual GitHub name.
 
 When git clone finishes, you should have a new directory called "lab-1-(your github id)" which will have the files you need for the rest of this lab.
 
