@@ -349,11 +349,12 @@ The following links are useful for learning how to make some common customizatio
 ### Questions
 
 Submit your answers to the lab questions on Gradescope.
-#### Question 1: Setup (do this after you finish all the Setup tasks)
+#### Question 1: Setup (do this *after* you finish all the Setup tasks)
 1. Show the output of running `ssh -T git@github.com`.
-2. Now show the output of running `ssh -T -p 443 git@ssh.github.com`.
-3. What is your instructional account's disk quota (to the nearest GB)? Do files in your temporary directory count against your quota?
-4. What text editor are you using?
+2. Now show the output of running `ssh -T -p 443 git@ssh.github.com`.  (Be careful to use "ssh.github.com", not just "github.com".)
+3. Show a screen-shot of the display of the program `/data02/ECE4203/bin/display_image`, to show that you have X-windows working.
+4. What is your instructional account's disk quota (to the nearest GB)? Do files in your temporary directory count against your quota?
+5. What text editor are you using?
 
 #### Question 2: Common terminal tasks
 
@@ -419,7 +420,7 @@ That was a lot of commands and a lot of new things to memorize (especially if yo
 * [Tmux](https://tmuxcheatsheet.com/)
 
 ## Acknowledgement
-Adapted to Cal Poly from UCB/EECS150 by Dr. Daniel Van Blerkom.
+Adapted / re-written for Cal Poly ECE4203 from UCB/EECS150 by Dr. Daniel Van Blerkom.
 
 This lab is the result of the work of many EECS151/251 GSIs over the years including:
 Written By:
