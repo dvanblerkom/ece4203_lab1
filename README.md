@@ -48,6 +48,7 @@ Adapted from UCB EECS150 (Go Bears!)
 8. [Conclusion](#paragraph7)
 9. [Lab Deliverables](#paragraph8) -->
 
+
 ## Overview
 
 In course labs you will be introduced to Very-Large Scale Integration (VLSI) design.
