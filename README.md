@@ -374,7 +374,7 @@ For 1-6 below, submit the command/keystrokes needed to generate the desired resu
 
 1. List the 5 most recently modified items in `/usr/bin`
 2. What directory is `git` installed in?
-3. Show the hidden files in your lab directory (the `ece4203-lab1` folder in the repo you cloned from GitHub).
+3. Show the hidden files in your lab directory (the `ece4203_lab1` folder in the repo you cloned from GitHub).
 4. What version of Vim is installed? Describe how you figured this out.
 5. (optional) Make a new directory called `backup` within `/tmp/<your-username>`. Copy all the files in this lab directory to the new `backup` directory. Then delete all the copies in the new directory.
 6. Run `ping www.google.com`, suspend it, then kill the process. Then run it in the background, report its PID, then kill the process.
