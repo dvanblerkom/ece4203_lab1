@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">
+﻿<h1 style="text-align: center;">
 ASIC Lab 1: Setup and Getting Around the Compute Environment
 </h1>
 <p align="center">
@@ -72,11 +72,10 @@ The first step for this lab is to setup your environment.  We will be doing this
 
 Here's a quick summary of the setup steps:
 1) Install PuTTY and Xming on your Windows machine to allow you to connect to the HPC computers.
-2) Create public/private encryption key pairs to authenticate your connection to GitHub.
-3) Clone your Github Classroom Lab 1 assignment into a directory in your HPC account.
-4) Run the Miniconda installation script.
+2) Clone the Github Lab 1 assignment into a directory in your HPC account.
+3) Run the Miniconda installation script.
 
-Note, the following (sadly) assumes you have a Windows machine.  Since Windows is not a serious engineering operating system, we need to 
+Note, the following assumes you have a Windows machine.  Since Windows is not a serious engineering operating system, we need to 
 add some programs to make it usable.  Mac users do not need to install PuTTY or Xming, as equivalent capabilities already exist in the Mac OS.
 
 ### PuTTY for Windows
@@ -144,6 +143,7 @@ This class will require you to work with the HPC computer using the command line
 
 [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/) - a full set of lectures from MIT on all the stuff you should have been taught but probably weren't.
 
+<!--
 ### Generate SSH encryption keys for GitHub
 
 Now we need a way to authenticate your HPC account with GitHub, to prove that it is you connecting to GitHub from the HPC computer. GitHub has moved away from using plain-text passwords, and now requires public key cryptography using SSH or GPG (we will use SSH).  First you need to generate the public and private keys, and then copy the public key into your GitHub user settings on the GitHub website.
@@ -159,11 +159,13 @@ Now we need a way to authenticate your HPC account with GitHub, to prove that it
        and copy it to the clipboard), and then paste it into the webpage where it says "Key".  
        You can type "HPC" in the "Title" box.
     Confirm by clicking the green "Add SSH key".
+-->
 
 ### Clone Assignment from Github Classroom
 
 In order to pull the files you will need for this lab from Github into your account on the HPC, you will use the git command 'clone'.  
 
+<!--
 (Unfortunately, the HPC computers are blocking direct SSH connections to GitHub, so we have to use SSH over HTTPS.  Nothing is easy.)
 
 When you accepted this GitHub classroom assignment, you were assigned a repository that looked something like:
@@ -178,6 +180,19 @@ To copy, or "clone", all the data from that repository into a directory in your 
 Make sure to add the ".git" at the end.  Again, obviously, replace "(your github id)" above with your actual GitHub name.
 
 When git clone finishes, you should have a new directory called "lab-1-(your github id)" which will have the files you need for the rest of this lab.
+-->
+The lab 1 repository URL is
+
+    https://github.com/dvb-ece-cpp/ece4203_lab1.git
+
+To copy, or "clone", all the data from that repository into a directory in your HPC account, type the following at the command prompt, from your home directory, when logged into the HPC:
+
+    git clone https://github.com/dvb-ece-cpp/ece4203_lab1.git
+
+Make sure to add the ".git" at the end.  
+
+When git clone finishes, you should have a new directory called "ece4203_lab1" which will have the files you need for the rest of this lab.  The files you will work on below will be in the "skel" directory, under "ece4203_lab1".
+
 
 ### Install Miniconda
 
@@ -185,7 +200,7 @@ The last part of the set-up we will do in this lab is to run the shell script in
 
 Type the following at the command prompt to run this script:
 
-    ~/lab-1-(your github id)/install_miniconda.sh
+    ~/ece4203-lab1/install_miniconda.sh
     
 This will take a while to finish, and will install the Anaconda software package system so that we can later install the VLSI tools.
 
@@ -215,7 +230,7 @@ imagine we want to add a leading 0 to all of the single digit numbers. The match
 sed -e 's/\(unit_cell_\)\([0-9]\{1\}\.\)/\10\2/' force_regs.ucli
 ```
 
-Both `sed`, vim, and `grep` use ”Basic Regular Expressions” by default. For regular expressions heavy with special characters, sometimes it makes more sense to assume most characters except `a-zA-Z0-9` have special meanings (and they get escaped with only to match them literally). This is called ”Extended Regular Expressions”, and `?+{}()` no longer need to be escaped. A great resource for learning more is [Wikipedia](http://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended). 
+Both `sed`, vim, and `grep` use ”Basic Regular Expressions” by default. For regular expressions heavy with special characters, sometimes it makes more sense to assume most characters except `a-zA-Z0-9` have special meanings (and they get escaped only to match them literally). This is called ”Extended Regular Expressions”, and `?+{}()` no longer need to be escaped. A great resource for learning more is [Wikipedia](http://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended). 
 
 In Vim, you can do this with `\v`:
 
@@ -324,9 +339,6 @@ You can also compare the contents of directories (the `-q` flag will summarize t
 vimdiff force_regs.ucli force_regs.random.ucli
 ```
 
-## Git <a name="paragraph6"></a>
-
-Build your familiarity with Git by answering [question 6](#paragraph8)
 
 ## Conclusion <a name="paragraph7"></a>
 
@@ -351,11 +363,10 @@ The following links are useful for learning how to make some common customizatio
 
 Submit your answers to the lab questions on Gradescope.
 #### Question 1: Setup (do this *after* you finish all the Setup tasks)
-1. Show the output of running `ssh -T git@github.com`.
-2. Now show the output of running `ssh -T -p 443 git@ssh.github.com`.  (Be careful to use "ssh.github.com", not just "github.com".)
-3. Show a screen-shot of the display of the program `/data02/ECE4203/bin/display_image`, to show that you have X-windows working.
-4. What is your instructional account's disk quota (to the nearest GB)? Do files in your temporary directory count against your quota?
-5. What text editor are you using?
+1. Show the output of `git ls-remote https://github.com/dvb-ece-cpp/ece4203_lab1.git`
+2. Show a screen-shot of the display of the program `/data02/ECE4203/bin/display_image`, to show that you have X-windows working.
+3. What is your instructional account's disk quota (to the nearest GB)? Do files in your temporary directory count against your quota?
+4. What text editor are you using?
 
 #### Question 2: Common terminal tasks
 
@@ -363,7 +374,7 @@ For 1-6 below, submit the command/keystrokes needed to generate the desired resu
 
 1. List the 5 most recently modified items in `/usr/bin`
 2. What directory is `git` installed in?
-3. Show the hidden files in your lab directory (the `lab1` folder in the repo you cloned from GitHub).
+3. Show the hidden files in your lab directory (the `ece4203-lab1` folder in the repo you cloned from GitHub).
 4. What version of Vim is installed? Describe how you figured this out.
 5. (optional) Make a new directory called `backup` within `/tmp/<your-username>`. Copy all the files in this lab directory to the new `backup` directory. Then delete all the copies in the new directory.
 6. Run `ping www.google.com`, suspend it, then kill the process. Then run it in the background, report its PID, then kill the process.
@@ -393,18 +404,11 @@ For each task below, please provide the commands that result in the correct perm
 3. Make the script writable by you ane everyone in your group, but unreadable by others
 
 #### Question 5: Makefile Targets
+Look at the Makefile in the "skel" directory.
 
 1. Add a new make rule that will create a file called `foo.txt`.  Make it also run the `output_name` rule.
 2. Name at least two ways that you could have the makefile regenerate the `output_name` target after its rule has been run.
 
-#### Question 6: Checking Git Understanding
-
-Submit the **command** required to perform the following tasks:
-
-1. How do you diff the Makefile versus its state as of the previous commit, if you have **not** staged the Makefile?
-1. How do you diff the Makefile versus its state as of the previous commit, if you **have** staged the Makefile?
-1. How do you make a new branch without switching to it?
-1. How do you switch to a new branch?
 
 ## Appendix
 
