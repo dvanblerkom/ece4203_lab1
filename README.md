@@ -377,7 +377,7 @@ For 1-6 below, submit the command/keystrokes needed to generate the desired resu
 3. Show the hidden files in your lab directory (the `ece4203_lab1` folder in the repo you cloned from GitHub).
 4. What version of Vim is installed? Describe how you figured this out.
 5. (optional) Make a new directory called `backup` within `/tmp/<your-username>`. Copy all the files in this lab directory to the new `backup` directory. Then delete all the copies in the new directory.
-6. Run `ping www.google.com`, suspend it, then kill the process. Then run it in the background, report its PID, then kill the process.
+6. Run `ping localhost`, suspend it, then kill the process. Then run it in the background, report its PID, then kill the process.
 7. Run `top` and report the average CPU load, the highest CPU job, and the amount of memory used (just report the results for this question; you don't need to supply the command/how you got it).
 
 #### Question 3: Fun with Regular Expressions
